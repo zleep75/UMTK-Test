@@ -1,20 +1,82 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+# UMTK-Test
 
-# Run and deploy your AI Studio app
+一个简单的网页小测试（选择题）。
 
-This contains everything you need to run your app locally.
+## 项目缘起（cp32pre）
 
-View your app in AI Studio: https://ai.studio/apps/drive/1iXEGEeMOnz49D1E5iEoPjA7mPmacwZzw
+本项目原计划用于 **cp32pre**：旨在测试前来领取“海希无料”的朋友们，能否把 **海铃** 和 **立希** 两位的名字写对（因为总是有人写错别字，所以做成了一个“选出正确写法”的小测验）。
 
-## Run Locally
+## 它是怎么运作的（概念说明）
 
-**Prerequisites:**  Node.js
+- 页面会展示一题或多题**选择题**。
+- 每题会给出多个名字写法的选项。
+- 用户选择自己认为正确的选项并提交。
 
+## 如何在本地运行（尽量写清楚）
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+### 0) 准备环境
+
+1. 安装 **Node.js（建议 LTS 版本）**  
+   安装完成后，打开终端/命令行，确认能输出版本号：
+   - `node -v`
+   - `npm -v`
+
+2. 获取代码
+   - 方式 A：直接下载 ZIP
+   - 方式 B：使用 git：
+     ```bash
+     git clone https://github.com/zleep75/UMTK-Test.git
+     cd UMTK-Test
+     ```
+
+### 1) 安装依赖
+
+在项目根目录（能看到 `package.json` 的目录）执行：
+
+```bash
+npm install
+```
+
+### 2) 启动开发服务器（最常见的方式）
+
+依次尝试以下命令之一（不同项目脚手架命令会不一样）：
+
+```bash
+npm run dev
+```
+
+如果提示没有 `dev` 脚本，再尝试：
+
+```bash
+npm start
+```
+
+或者：
+
+```bash
+npm run serve
+```
+
+启动成功后，终端会输出一个本地地址（常见如 `http://localhost:3000` 或 `http://localhost:5173`），用浏览器打开即可。
+
+### 3) 构建与部署（可选）
+
+如果你需要生成可部署的静态资源，常见命令是：
+
+```bash
+npm run build
+```
+
+构建产物通常会输出到 `dist/` 或 `.next/` 等目录（取决于项目���用的框架）。
+
+## 许可（License）
+
+本项目采用 **MIT License** 开源许可发布。
+
+- 你可以自由地使用、复制、修改、合并、发布、分发本项目代码（包括用于商业用途）。
+- 你必须在再发布/再分发时保留原作者版权声明与许可声明。
+- 本项目按“现状（AS IS）”提供，不提供任何明示或暗示的担保；作者不对使用本项目造成的任何损失负责。
+
+## 许可（License）
+
+如果你还没放 License，可以先留空，之后再补。
